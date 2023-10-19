@@ -1,0 +1,600 @@
+/* ここから下に記載していく */
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+  }
+
+img {
+    max-width: 100%;
+}
+.wrap {
+    margin: auto;
+}
+
+.topButton {
+    position: fixed;
+    bottom: 20px;
+    right: 100px;
+    padding: 10px 15px;
+  }
+  
+.topButton:hover {
+    opacity: 0.5;
+  }
+
+a {
+    color: #000;
+    text-decoration: none;
+}
+header nav ul {
+        display: flex;
+        justify-content: flex-end;
+        font: 21px;
+    }
+
+header nav ul li {
+    margin: 30px;
+    padding: 20px;
+    transition: all 0.3s;
+    border-radius: .6rem;
+    color: #FFF;
+    text-align: center;
+    text-decoration: none;
+    letter-spacing: .1rem;
+}
+
+header nav ul li:hover {
+    opacity: 0.5;
+    background-color: #8cff7d
+}
+
+header {
+    display: flex;
+    justify-content: space-around;    
+}
+
+@keyframes scroll-anim {
+    from {
+      opacity: 0;
+      scale: 0.5;
+    }
+    to {
+      opacity: 1;
+      scale: 1.1;
+    }
+  }
+
+
+
+/* SP */
+@media screen and (max-width: 600px){
+    /* header */
+    .header {
+        flex-direction: column;
+
+        height: auto;
+
+    }
+    .HEADER_LOGO{
+        justify-content: flex-end;
+        height:auto;    
+    }
+}
+.wrap {
+    width: 1200px;
+}
+
+
+.FIRST_VIEW {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+@media screen and (max-width: 600px) {
+    #header {
+        flex-direction: column;
+    }
+    
+    .FIRST_VIEW {
+        width: 100%;
+        height: 200px;
+    }
+}
+.MAIN_IMG {
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+}
+.MAIN_IMG{
+    background-image: url('mainbg.png');
+    animation: slide-animation-01 5s;
+    transition:1s all;
+ }
+ @keyframes slide-animation-01 {
+    0% {opacity: 0; transform: scale(1);}
+   50% {opacity: 0; transform: scale(1);}
+   80% {opacity: 1; transform: scale(1);}
+   100% {opacity: 1; transform: scale(1);}
+ }
+.MAIN_IMG:hover {
+    transform:scale(2,1);
+    transition:1s all;
+}
+
+.FIRST_VIEW h1 {
+    text-shadow: 2px 2px 3px #000, -1px -1px 3px #000;
+    position: absolute;
+    font-size: 40px;
+    color:white;
+    top: 40%;
+    left: 50%;
+    transform:translate(-280px);
+    font-weight: bold;
+    background: linear-gradient(transparent 60%, #8cff7d 60%);
+
+    }
+
+.FIRST_VIEW h2 {
+    text-shadow: 2px 2px 3px #000, -1px -1px 3px #000;
+    position: absolute;
+    white-space: nowrap;
+    font-size: 35px;
+    color:white;
+    top: 60%;
+    left: 50%;
+    transform:translate(-350px);
+    }
+
+.ABOUT {
+    text-align: center;
+    line-height: 40px;
+}
+.ABOUT_TITLE {
+    color: #ffd61a;
+    font-size: 24px;
+    padding-top: 60px;
+    padding-bottom: 30px;
+    font-weight: bold;
+}
+.ABOUT_A {
+    font: size 16px;
+    padding-bottom: 60px;
+}
+.ABOUT_B {
+    font: size 16px;
+    padding-bottom: 50px;
+}
+.ABOUT_C {
+    font: size 16px;
+    padding-bottom: 40px;
+}
+.ABOUT_D {
+    font: size 16px;
+    padding-bottom: 40px;
+}
+.ABOUT_E {
+    font: size 16px;
+    padding-bottom: 80px;
+}
+
+
+
+.slide-wrap{
+    display:-webkit-box;
+    display:-ms-flexbox;
+    display: flex;
+    overflow-x: scroll;
+    -webkit-overflow-scrolling: touch;
+    overflow-scrolling: touch;
+    scroll-snap-type: x mandatory;
+    padding:0 0 1em;
+    margin:0 0 2em 0;
+    scroll-behavior: smooth;
+ }
+ .slide-wrap .slide-content{
+    flex: 0 0 50%;
+    margin: 0 10px;
+    height:100%;
+ }
+ @media screen and (max-width: 480px){
+ .slide-wrap .slide-content {
+     flex: 0 0 88%;
+     margin: 0px 5px;
+     scroll-snap-align:center;
+ }
+ }
+
+.COURSE_CONTENT01 {
+    animation-name:fadeUpAnime;
+    animation-duration:1.5s;
+    animation-fill-mode:forwards;
+    opacity: 0;
+}
+@keyframes fadeUpAnime{
+  from {
+    opacity: 0;
+  transform: translateY(100px);
+  }
+
+  to {
+    opacity: 1;
+  transform: translateY(0);
+  }
+}
+.delay-time02{
+    animation-delay: 0.5s;
+    flex-direction: row-reverse;
+    }
+    
+.delay-time03{
+    animation-delay: 1s;
+    }
+
+.COURSE_AREA {
+    text-align: center;
+    width:100%;
+}
+
+.COURSE_TOPTEXT {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    line-height: 40px;
+}
+.COURSE_TOPTEXT h2 {
+    font-size: 24px;
+    padding-bottom: 30px;
+    font-weight: bold;   
+}
+.COURSE_CONTENT01 {
+    display: flex;
+    background-color: #fafafa;
+    width: 100%;
+}
+.COURSE01_IMG {
+    width: 50%;
+    object-fit: cover;
+
+}
+.COURSE01_TEXT {
+    padding-left: 50px;
+    padding-top: 120px;
+    padding-bottom: 120px;
+    width: 430px;
+    line-height: 35px;
+    text-align: left;
+}
+.COURSE01_TEXT h2 {
+    
+    padding-bottom: 40px;
+    font-size: 24px;   
+    font-weight: bold;  
+}
+.COURSE_CONTENT02 {
+    display: flex;
+    flex-direction: row-reverse;
+    text-align: left;
+    width: 100%;
+    background-color: #fafafa;   
+}
+.COURSE02_IMG {
+    width: 50%;
+    object-fit: cover;
+}
+.COURSE02_TEXT {
+    padding-right: 50px;
+    width: 430px;
+    line-height: 40px;
+    padding-top: 120px;
+    padding-bottom: 120px;
+}
+.COURSE02_TEXT h2 {
+    
+    padding-bottom: 40px;
+    font-size: 24px;   
+    font-weight: bold;  
+}
+
+.COURSE_CONTENT03 {
+    display: flex;
+    text-align: left;
+    background-color: #fafafa;
+}
+.COURSE03_IMG {
+    width: 50%;
+    object-fit: cover;
+}
+.COURSE03_TEXT {
+    padding-left: 50px;
+    padding-top: 120px;
+    padding-bottom: 120px;
+    width: 430px;
+    line-height: 40px;
+    width: 50%;
+}
+.COURSE03_TEXT h2 {
+    
+    padding-bottom: 40px;
+    font-size: 24px;   
+    font-weight: bold;  
+}
+
+.NEWS_AREA {
+    width: 100%;
+}
+
+.NEWS_TOP {
+    text-align: center;
+    padding-bottom: 60px;
+    font-size: 18px;
+}
+.NEWS_TOP h2 {
+    line-height: 40px;
+    color: #ffd61a;
+    font-size: 24px;
+    padding-top: 60px;
+    padding-bottom: 30px;
+    font-weight: bold;
+}
+
+.NEWS_CONTENTS {
+    display: flex;
+    justify-content: center;
+}
+.NEWS_CONTENT01 {
+    width:300px;
+    padding-right: 30px;
+}
+.NEWS01_DATE {
+    text-align: left;
+    padding-top: 30px;
+    padding-bottom: 24px;
+}
+.NEWS01_TEXT {
+    text-align: left;
+    font-size: 13px;
+    line-height: 30px;
+}
+
+.NEWS_CONTENT02 {
+    width:300px;
+    padding-right: 30px;
+}
+.NEWS02_DATE {
+    text-align: left;
+    padding-top: 30px;
+    padding-bottom: 24px;
+}
+.NEWS02_TEXT {
+    text-align: left;
+    font-size: 13px;
+    line-height: 30px;
+}
+
+.NEWS_CONTENT03 {
+    width:300px;
+    padding-right: 30px;
+}
+.NEWS03_DATE {
+    text-align: left;
+    padding-top: 30px;
+    padding-bottom: 24px;
+}
+.NEWS03_TEXT {
+    text-align: left;
+    font-size: 13px;
+    line-height: 30px;
+}
+
+.NEWS_MORE {
+    display: block;
+    margin: auto;
+    text-align: center;
+    color: white;
+    border: none;
+    margin-top: 60px;
+    margin-bottom: 60px;
+    width: 300px;
+    height: 60px;
+    font-size: 18px;
+    background-repeat: no-repeat;
+    background-position: 100% 0;
+    background-size: 200% auto;
+    background-image: linear-gradient(
+    to right,
+    #000000 0%,
+    #000000 50%,
+    #ffd61a 50%,
+    #ffd61a 100%
+  );
+  box-shadow: 0 3px 10px rgb(0 0 0 / 16%);
+  transition: background-position ease 0.4s;
+  text-align: center;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 20px;
+}
+.NEWS_MORE:hover {
+    background-position: 0 0;
+}
+
+
+.twitter-timeline {
+    margin: auto;
+    width: 100%;
+    border: 1px solid #333;
+    padding: 10px;
+}
+.HEADER_LOGO {
+    padding:20px; 
+    padding-left: 50px;
+}
+
+.ACCESS_AREA {
+    text-align: center;
+    background-color: #fafafa;
+}
+
+.ACCESS_TOP {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    margin-top: 40px;
+}
+
+.ACCESS_TOP h2 {
+    padding-bottom: 30px;
+    font-size: 24px;   
+    font-weight: bold;  
+}
+
+.MAP {
+    width: 100%;
+}
+
+.ACCESS_DETAIL {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    line-height: 50px;
+}
+.ACCESS_DETAIL_TB {
+    display: flex;
+    justify-content: center;
+
+}
+.ACCESS_DETAIL_TB th {
+    text-align: left;
+    padding-right: 100px;
+}
+
+.ACCESS_DETAIL_TB td {
+    text-align: left;
+}
+
+.CONTACT_TOP {
+    text-align: center;
+    font-size: 16px;
+    padding-top: 60px;
+    padding-bottom: 70px;
+    line-height: 30px;
+}
+.CONTACT_TOP h2 {
+    padding-bottom: 30px;
+    font-size: 24px;   
+    font-weight: bold; 
+}
+.CT1 {
+    padding-bottom: 60px;
+}
+.CT2 {
+    padding-bottom: 30px;
+}
+.CONTACT_BTN {
+    display: block;
+    margin: auto;
+    text-align: center;
+    color: white;
+    border: none;
+    margin-top: 30px;
+    margin-bottom: 140px;
+    width: 300px;
+    height: 60px;
+    font-size: 18px;
+    background-repeat: no-repeat;
+    background-position: 100% 0;
+    background-size: 200% auto;
+    background-image: linear-gradient(
+    to right,
+    #000000 0%,
+    #000000 50%,
+    #ffd61a 50%,
+    #ffd61a 100%
+  );
+  box-shadow: 0 3px 10px rgb(0 0 0 / 16%);
+  transition: background-position ease 0.4s;
+  text-align: center;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 20px;
+}
+.CONTACT_BTN:hover {
+    background-position: 0 0;
+}
+
+.formTable {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+  }
+
+.formTable th {
+    text-align: left;
+    vertical-align: top;
+    padding-left: 16px;
+    padding-right: 64px;
+    padding-top: 8px;
+    border-right: 2px solid #bfbfbf;
+    border-bottom: 2px solid #bfbfbf;
+}
+
+.formTable tbody {
+    border-top: 2px solid #bfbfbf;
+}
+
+.formTable td {
+    border-bottom: 2px solid #bfbfbf;
+}
+
+.formTable input {
+    margin: 8px;
+    height: 36px;
+}
+.formTable input name {
+    width: 328px;
+}
+.formTable select {
+    margin: 8px;
+    height: 36px;
+    font-size: 16px;
+}
+.formTable option {
+    font-size: 50px;
+}
+.box_br {
+    margin-bottom: 24px;
+
+}
+.box_br input {
+    vertical-align: middle;
+}
+.formTable textarea {
+    text-align: start;
+    margin: 8px;
+}
+.formTable select {
+    width: 285px;
+}
+.footer {
+    background-color:  #707070;
+}
+.footer p {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    text-align: center;
+    font: size 16px;
+    color: white;
+}
+
